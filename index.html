@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samantha Greenblatt — Product Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Samantha Greenblatt</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <!-- FILL IN: update title / location as needed -->
+      <span class="eyebrow">Product Manager · NYC</span>
+
+      <!-- FILL IN: update headline name if preferred differently -->
+      <h1>Hi, I'm <em>Samantha.</em></h1>
+
+      <!-- FILL IN: swap in updated bio text below -->
+      <p class="hero-bio">
+        I'm Sam — a Product Manager who loves building things that make complicated systems feel simple.
+        I get energized by finding the real problem, getting the right people in a room, and shipping
+        something that actually works and people use. Prior to product, I worked in data and analytics,
+        which means I ask a lot of questions before I trust any answer — and I bring that same instinct
+        to every product I build. Outside of work you'll find me hunting for the best coffee shop in
+        whatever neighborhood I'm in, on the ski slopes (weather permitting), or baking a new batch of
+        sourdough.
+      </p>
+
+      <a href="work.html" class="btn-pill">View my work →</a>
+    </div>
+  </section>
+
+  <!-- ── Selected Work ── -->
+  <section class="work-preview">
+    <div class="section-header">
+      <h2>Selected work</h2>
+      <span class="section-label">Case studies</span>
+    </div>
+
+    <div class="case-list">
+
+      <!-- FILL IN: replace each case-row href, title, italic word, and tag with real case study details -->
+
+      <a href="work.html" class="case-row">
+        <span class="case-num">01</span>
+        <span class="case-title">Redesigning the <em>Checkout</em> Flow</span>
+        <span class="tag">E-commerce</span>
+      </a>
+
+      <a href="work.html" class="case-row">
+        <span class="case-num">02</span>
+        <span class="case-title">Building a <em>Smarter</em> Search</span>
+        <span class="tag">Search &amp; Discovery</span>
+      </a>
+
+      <a href="work.html" class="case-row">
+        <span class="case-num">03</span>
+        <span class="case-title">Unifying the <em>Onboarding</em> Experience</span>
+        <span class="tag">Growth</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <span class="footer-name">Samantha Greenblatt</span>
+    <nav class="footer-links">
+      <!-- FILL IN: replace # with real LinkedIn, GitHub, and email URLs -->
+      <a href="https://www.linkedin.com/in/samanthalgreenblatt/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/samanthagreenblatt" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:sgreenblatt12@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Mark the current page's nav link as active
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      if (link.getAttribute('href') === location.pathname.split('/').pop()) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

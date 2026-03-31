@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Samantha Greenblatt</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .resume-download {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resume-note {
+      font-size: 0.82rem;
+      color: var(--accent-muted);
+    }
+
+    /* Section label above a group of cards */
+    .resume-section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-muted);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      margin-top: 2.5rem;
+    }
+
+    /* Card */
+    .resume-card {
+      background: #ede8fb;
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .resume-company {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--headline);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .resume-company span {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--accent-muted);
+      margin-left: 0.4rem;
+    }
+
+    .resume-role-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.35rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .resume-role-row:first-of-type {
+      margin-top: 0;
+    }
+
+    .resume-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--body-text);
+    }
+
+    .resume-dates {
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+      white-space: nowrap;
+    }
+
+    /* Education & Skills cards — slightly simpler */
+    .resume-card p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--body-text);
+    }
+
+    .resume-card p strong {
+      color: var(--headline);
+      font-weight: 600;
+    }
+
+    .resume-card .edu-school {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--headline);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .resume-card .edu-degree {
+      font-size: 0.9rem;
+      color: var(--body-text);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Samantha Greenblatt</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Page header ── -->
+  <header class="page-header">
+    <span class="eyebrow">Experience</span>
+    <h1>Resume.</h1>
+  </header>
+
+  <main class="page-body">
+
+    <!-- PDF download -->
+    <div class="resume-download">
+      <a href="resume.pdf" target="_blank" rel="noopener" class="btn-primary">
+        Download PDF ↗
+      </a>
+      <!-- FILL IN: update date when resume is refreshed -->
+      <p class="resume-note">Last updated April 2026</p>
+    </div>
+
+    <!-- Experience -->
+    <p class="resume-section-label">Experience</p>
+
+    <div class="resume-card">
+      <div class="resume-company"><a href="https://collectivehealth.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border);">Collective Health</a> <span>New York, NY &amp; San Francisco, CA</span></div>
+      <div class="resume-role-row">
+        <span class="resume-title">Product Manager, Data Product</span>
+        <span class="resume-dates">Jan. 2026 – Present</span>
+      </div>
+      <div class="resume-role-row">
+        <span class="resume-title">Senior Data Analyst, Analytics</span>
+        <span class="resume-dates">Jul. 2025 – Dec. 2025</span>
+      </div>
+      <div class="resume-role-row">
+        <span class="resume-title">Data Analyst II, Analytics</span>
+        <span class="resume-dates">Sep. 2023 – Jun. 2025</span>
+      </div>
+    </div>
+
+    <div class="resume-card">
+      <div class="resume-company">Cloudmed <span>acquired by <a href="https://www.r1rcm.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border);">R1 RCM</a> · San Francisco, CA</span></div>
+      <div class="resume-role-row">
+        <span class="resume-title">Senior Analyst &amp; Analyst, Audit &amp; Strategy Team</span>
+        <span class="resume-dates">Jul. 2021 – Aug. 2023</span>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <p class="resume-section-label">Education</p>
+
+    <div class="resume-card">
+      <div class="edu-school">Vanderbilt University</div>
+      <div class="edu-degree">B.A., Medicine, Health &amp; Society</div>
+    </div>
+
+    <!-- Skills & Interests -->
+    <p class="resume-section-label">Skills &amp; Interests</p>
+
+    <div class="resume-card">
+      <!-- FILL IN: update skills as needed -->
+      <p><strong>Skills</strong><br>SQL, Python, Databricks, AWS, Looker, Excel, GitHub, JIRA, R, Power BI, AI Tools (Claude, Gemini, Cursor), Data Governance</p>
+      <br>
+      <p><strong>Interests</strong><br>Sourdough baking, skiing, hiking, running, pilates, reading</p>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <span class="footer-name">Samantha Greenblatt</span>
+    <nav class="footer-links">
+      <a href="https://www.linkedin.com/in/samanthalgreenblatt/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/samanthagreenblatt" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:sgreenblatt12@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
