@@ -9,16 +9,16 @@
 /* ── Design tokens ── */
 :root {
   --bg:            #f5efe8;
-  --hero-bg:       #efd9ce;
-  --accent:        #7161ef;
-  --accent-muted:  #957fef;
-  --border:        #dec0f1;
-  --headline:      #3c2a6b;
-  --body-text:     #4a3b6b;
-  --nav-bg:        #3c2a6b;
-  --footer-bg:     #3c2a6b;
+  --hero-bg:       #f5e8de;
+  --accent:        #856a81;
+  --accent-muted:  #856a81;
+  --border:        #c9b0bf;
+  --headline:      #2e1f2e;
+  --body-text:     #44333c;
+  --nav-bg:        #2e1f2e;
+  --footer-bg:     #2e1f2e;
   --footer-text:   #efd9ce;
-  --footer-muted:  #b79ced;
+  --footer-muted:  #c4a8b8;
 
   --serif: 'Playfair Display', Georgia, serif;
   --sans:  'DM Sans', system-ui, sans-serif;
@@ -52,7 +52,7 @@ body {
   top: 0;
   z-index: 100;
   background: var(--nav-bg);
-  border-bottom: 1px solid rgba(222, 192, 241, 0.25);
+  border-bottom: 1px solid rgba(206, 197, 216, 0.25);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -339,7 +339,7 @@ body {
 .about-photo {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(60, 42, 107, 0.10);
+  box-shadow: 0 4px 24px rgba(34, 14, 31, 0.10);
 }
 
 .about-text h2 {
