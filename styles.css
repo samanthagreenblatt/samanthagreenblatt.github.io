@@ -8,16 +8,17 @@
 
 /* ── Design tokens ── */
 :root {
-  --bg:            #f5efe8;
-  --hero-bg:       #efd9ce;
-  --accent:        #7161ef;
-  --accent-muted:  #957fef;
-  --border:        #dec0f1;
-  --headline:      #3c2a6b;
-  --body-text:     #4a3b6b;
-  --footer-bg:     #3c2a6b;
-  --footer-text:   #efd9ce;
-  --footer-muted:  #b79ced;
+  --bg:            #f5eedc;
+  --hero-bg:       #d4cde8;
+  --accent:        #856a81;
+  --accent-muted:  #856a81;
+  --border:        #856a81;
+  --headline:      #44333c;
+  --body-text:     #44333c;
+  --nav-bg:        #220e1f;
+  --footer-bg:     #220e1f;
+  --footer-text:   #f5eedc;
+  --footer-muted:  #856a81;
 
   --serif: 'Playfair Display', Georgia, serif;
   --sans:  'DM Sans', system-ui, sans-serif;
@@ -50,8 +51,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  background: var(--nav-bg);
+  border-bottom: 1px solid rgba(133, 106, 129, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +63,7 @@ body {
   font-family: var(--serif);
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--headline);
+  color: var(--footer-text);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -77,14 +78,14 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--headline);
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.18s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--accent);
+  color: var(--footer-text);
 }
 
 /* ============================================================
@@ -338,7 +339,7 @@ body {
 .about-photo {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(60, 42, 107, 0.10);
+  box-shadow: 0 4px 24px rgba(68, 51, 60, 0.10);
 }
 
 .about-text h2 {
