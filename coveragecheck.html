@@ -17,38 +17,44 @@
     .case-study-body {
       max-width: 740px;
       margin: 0 auto;
-      padding: 3rem var(--pad-x) 6rem;
+      padding: 3rem var(--pad-x) 7rem;
     }
 
+    /* Back link */
     .back-link {
-      display: inline-block;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       font-weight: 500;
-      color: var(--accent-muted);
+      color: var(--accent);
       text-decoration: none;
-      margin-bottom: 2.75rem;
-      transition: color 0.18s;
+      margin-bottom: 3.5rem;
+      transition: color 0.2s, gap 0.2s;
     }
-    .back-link:hover { color: var(--headline); }
-    .back-link::before { content: "← "; }
+    .back-link:hover {
+      color: var(--headline);
+      gap: 0.55rem;
+    }
+    .back-link::before { content: "←"; }
 
     /* ── Section headings ── */
     .case-study-body h2 {
       font-family: var(--serif);
-      font-size: 1.45rem;
+      font-size: 1.65rem;
       color: var(--headline);
       font-weight: 600;
-      margin-top: 3rem;
-      margin-bottom: 0.85rem;
-      line-height: 1.25;
+      margin-top: 4.5rem;
+      margin-bottom: 1.1rem;
+      line-height: 1.2;
     }
 
     .case-study-body p {
       font-size: 1.05rem;
-      line-height: 1.85;
-      margin-bottom: 1.15rem;
+      line-height: 1.88;
+      margin-bottom: 1.2rem;
       color: var(--body-text);
     }
 
@@ -56,63 +62,64 @@
 
     /* ── Screenshot placeholder ── */
     .screenshot-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 240px;
       border: 1.5px dashed var(--border);
-      border-radius: 10px;
-      background: rgba(133, 106, 129, 0.04);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      margin: 2rem 0;
-      color: var(--accent-muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-      font-style: italic;
-    }
-
-    /* ── Try it yourself block ── */
-    .demo-block {
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      background: rgba(133, 106, 129, 0.06);
-      padding: 1.75rem 2rem;
-      margin: 2rem 0;
-    }
-
-    .demo-block .demo-label {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
+      border-radius: 14px;
+      background: rgba(148, 100, 166, 0.035);
+      margin: 2.5rem 0;
+      color: var(--border);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       font-weight: 500;
-      color: var(--accent-muted);
-      margin-bottom: 0.85rem;
     }
 
-    .demo-block p {
-      margin-bottom: 0;
-      font-size: 0.98rem;
-      line-height: 1.75;
+    /* ── Demo block ── */
+    .demo-block {
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      background: var(--hero-bg);
+      padding: 2rem 2rem 1.75rem;
+      margin: 2.5rem 0;
     }
 
-    .demo-block .demo-prompt {
+    .demo-label {
       display: block;
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--headline);
-      line-height: 1.9;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
     }
 
-    /* ── Metric paragraphs ── */
+    /* SMS bubble column */
+    .demo-bubbles {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.55rem;
+    }
+
+    .demo-bubble {
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      padding: 0.6rem 1.05rem;
+      border-radius: 18px 18px 4px 18px;
+      max-width: 88%;
+      display: inline-block;
+    }
+
+    /* ── Metric / "next" paragraphs ── */
     .metric-name {
       font-weight: 600;
       color: var(--headline);
-    }
-
-    /* ── Divider ── */
-    .section-rule {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 3.5rem 0 0;
     }
   </style>
 </head>
@@ -155,21 +162,18 @@
 
     <p>The frustrating part isn't that the information doesn't exist. It's that accessing it at the moment you need it is surprisingly hard. Member portals are outdated and require logins you've forgotten. Apps require downloads you haven't done. And by the time you're sitting in a waiting room or standing at a pharmacy counter, none of those options feel worth the hassle.</p>
 
-    <hr class="section-rule" />
     <h2>The User</h2>
 
     <p>Working adults with employer-sponsored health coverage who aren't benefits experts, which is most people. They chose a plan during open enrollment, probably didn't read the summary of benefits closely, and now nine months later they're trying to remember if urgent care is $50 or $75.</p>
 
     <p>These people are showing up. They're booking appointments, picking up prescriptions, and going to the doctor. They just don't have a fast, easy way to answer their questions at the moment it matters.</p>
 
-    <hr class="section-rule" />
     <h2>The Insight</h2>
 
     <p>The problem isn't information access, it's information access at the right moment. Most members could theoretically look this up. The barrier is friction, not availability. A solution that lives inside a portal or app doesn't solve the waiting room problem, because getting into the portal is exactly what takes too long.</p>
 
     <p>SMS is the right channel here because it requires nothing. No download, no login, no account recovery flow. Everyone already knows how to send a text. If a member can text a number and get a real answer in under a minute, the friction problem is solved.</p>
 
-    <hr class="section-rule" />
     <h2>What I Built</h2>
 
     <p>CoverageCheck is a text-based benefits lookup tool. A member texts a short question in plain language — like "what's my copay for urgent care?", "is therapy covered?", or "how much should antibiotics cost" — and gets a direct answer based on their plan.</p>
@@ -180,20 +184,20 @@
 
     <div class="demo-block">
       <span class="demo-label">Try it yourself</span>
-      <span class="demo-prompt">"What's my copay at physical therapy?"</span>
-      <span class="demo-prompt">"Is therapy covered?"</span>
-      <span class="demo-prompt">"What tier is Amoxicillin?"</span>
-      <span class="demo-prompt">"What's my deductible?"</span>
+      <div class="demo-bubbles">
+        <div class="demo-bubble">"What's my copay at physical therapy?"</div>
+        <div class="demo-bubble">"Is therapy covered?"</div>
+        <div class="demo-bubble">"What tier is Amoxicillin?"</div>
+        <div class="demo-bubble">"What's my deductible?"</div>
+      </div>
     </div>
 
     <div class="screenshot-placeholder">Screenshot: example conversation</div>
 
-    <hr class="section-rule" />
     <h2>What's In Scope</h2>
 
     <p>CoverageCheck is designed to answer a specific, bounded set of questions: copays by visit type (primary care, specialist, urgent care, physical therapy, mental health), whether a service category is covered, prescription coverage and cost tiers, and deductible and out-of-pocket maximum amounts.</p>
 
-    <hr class="section-rule" />
     <h2>What's Out of Scope (and Why)</h2>
 
     <p><strong>Real-time cost estimation:</strong> answering "how much will I owe after my deductible" requires knowing how much of a member's deductible they've already met, which means integrating with the plan's claims system in real time. It also depends on more than just the provider type. Someone can't ask "how much will my surgery cost" because that answer involves far more than a single lookup. These are v2 problems.</p>
@@ -202,14 +206,12 @@
 
     <p><strong>Claim status:</strong> a separate product entirely. CoverageCheck is a benefits reference tool, not a claims tool.</p>
 
-    <hr class="section-rule" />
     <h2>How It Would Work in Production</h2>
 
     <p>The demo uses a hardcoded plan. In a real implementation, a member would verify their identity when they first text in, likely by providing their member ID and date of birth, or confirming a one-time code sent to their email on file. Once verified, the system recognizes their phone number for future sessions. No username, no password, no recovery flow. The goal is to keep authentication lightweight enough that it doesn't recreate the friction the tool is designed to eliminate.</p>
 
     <p>Once verified, the system pulls their specific plan's benefit structure and answers questions accordingly. The underlying data (copays, coverage rules, formulary tiers) already exists in every health plan's systems. The technical lift isn't generating the information, it's connecting a natural language interface to a structured benefits database and handling the authentication layer securely.</p>
 
-    <hr class="section-rule" />
     <h2>Metrics I'd Track</h2>
 
     <p><span class="metric-name">Activation rate:</span> the percentage of members who complete verification and send at least one query. This is the most basic signal that the tool is usable and that the onboarding flow isn't creating its own friction.</p>
@@ -222,7 +224,6 @@
 
     <p><span class="metric-name">Return usage:</span> do members text back? Repeat usage is a signal that it's actually solving the problem.</p>
 
-    <hr class="section-rule" />
     <h2>What I'd Explore Next</h2>
 
     <p>Real-time eligibility integration, so the tool can answer "how much of my deductible have I met?" and give personalized cost estimates rather than just plan-level copays. This is the biggest unlock for v2.</p>
@@ -233,7 +234,6 @@
 
     <p>Proactive outreach: texting a member before a scheduled appointment with their relevant copay information, so they don't have to ask.</p>
 
-    <hr class="section-rule" />
     <h2>What I Learned</h2>
 
     <p>When I tested early versions of this with friends and family, a few things surprised me. People asked questions I hadn't anticipated, like "do I need a referral for a dermatologist?" and "is my gym membership covered?" Neither was in my initial scope, and both pointed to a broader theme: members don't know what they don't know about their plan, and they'll use any available channel to find out.</p>
