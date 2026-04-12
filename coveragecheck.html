@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoverageCheck — Samantha Greenblatt</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="description" content="CoverageCheck: an SMS-based health insurance benefits lookup tool. A product case study by Samantha Greenblatt." />
+  <meta property="og:title" content="CoverageCheck — Samantha Greenblatt" />
+  <meta property="og:description" content="An SMS-based health insurance benefits lookup tool. A product case study." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Case study layout ── */
+    .case-study-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 3rem var(--pad-x) 6rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent-muted);
+      text-decoration: none;
+      margin-bottom: 2.75rem;
+      transition: color 0.18s;
+    }
+    .back-link:hover { color: var(--headline); }
+    .back-link::before { content: "← "; }
+
+    /* ── Section headings ── */
+    .case-study-body h2 {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      color: var(--headline);
+      font-weight: 600;
+      margin-top: 3rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.25;
+    }
+
+    .case-study-body p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 1.15rem;
+      color: var(--body-text);
+    }
+
+    .case-study-body p:last-child { margin-bottom: 0; }
+
+    /* ── Screenshot placeholder ── */
+    .screenshot-placeholder {
+      border: 1.5px dashed var(--border);
+      border-radius: 10px;
+      background: rgba(133, 106, 129, 0.04);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+      color: var(--accent-muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      font-style: italic;
+    }
+
+    /* ── Try it yourself block ── */
+    .demo-block {
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      background: rgba(133, 106, 129, 0.06);
+      padding: 1.75rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .demo-block .demo-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .demo-block p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .demo-block .demo-prompt {
+      display: block;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--headline);
+      line-height: 1.9;
+    }
+
+    /* ── Metric paragraphs ── */
+    .metric-name {
+      font-weight: 600;
+      color: var(--headline);
+    }
+
+    /* ── Divider ── */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3.5rem 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Samantha Greenblatt</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="https://substack.com/@samanthagreenblatt" target="_blank" rel="noopener">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Page header ── -->
+  <header class="page-header">
+    <span class="eyebrow">Case study</span>
+    <h1>CoverageCheck.</h1>
+  </header>
+
+  <!-- ── Case study body ── -->
+  <main class="case-study-body">
+
+    <a href="work.html" class="back-link">Back to work</a>
+
+    <h2>The Problem</h2>
+
+    <p>I feel like every time I'm on the train to the doctor, or even in the waiting room, I'm sitting there thinking one of a few things: 1) did I bring my health insurance card 2) I hope my copay isn't expensive and 3) is this even covered??</p>
+
+    <p>And I say this as a very healthcare literate person. I've spent 5 years working in healthcare and I have spent many hours (some of which were dedicated to resetting my password and finding the actual right webpage) navigating my health insurer's website to prepare for more major care.</p>
+
+    <p>But somehow I still find myself in the same position over and over, trying to pull together this information in the 30 minute window between when I left for the appointment and when I get seen.</p>
+
+    <p>There have been some improvements here. I can theoretically get a digital ID card from their app if I forgot to bring it, and I can also see my copays and what's covered. But that requires either an app or a website, a password I don't have, and finding the right page. I could call member services, but 1) that would require the phone number on my ID card and 2) I am avoiding a phone call if I can.</p>
+
+    <p>More anecdotally, I swear my physical therapist charges me $25 or $50 as my copay depending on who the receptionist is, and I don't know which is correct. I recently talked myself out of going to urgent care when I was sick because I was pretty sure my copay was expensive and I thought my PCP would be less, but I was just guessing. The friction to verify stopped me.</p>
+
+    <p>The frustrating part isn't that the information doesn't exist. It's that accessing it at the moment you need it is surprisingly hard. Member portals are outdated and require logins you've forgotten. Apps require downloads you haven't done. And by the time you're sitting in a waiting room or standing at a pharmacy counter, none of those options feel worth the hassle.</p>
+
+    <hr class="section-rule" />
+    <h2>The User</h2>
+
+    <p>Working adults with employer-sponsored health coverage who aren't benefits experts, which is most people. They chose a plan during open enrollment, probably didn't read the summary of benefits closely, and now nine months later they're trying to remember if urgent care is $50 or $75.</p>
+
+    <p>These people are showing up. They're booking appointments, picking up prescriptions, and going to the doctor. They just don't have a fast, easy way to answer their questions at the moment it matters.</p>
+
+    <hr class="section-rule" />
+    <h2>The Insight</h2>
+
+    <p>The problem isn't information access, it's information access at the right moment. Most members could theoretically look this up. The barrier is friction, not availability. A solution that lives inside a portal or app doesn't solve the waiting room problem, because getting into the portal is exactly what takes too long.</p>
+
+    <p>SMS is the right channel here because it requires nothing. No download, no login, no account recovery flow. Everyone already knows how to send a text. If a member can text a number and get a real answer in under a minute, the friction problem is solved.</p>
+
+    <hr class="section-rule" />
+    <h2>What I Built</h2>
+
+    <p>CoverageCheck is a text-based benefits lookup tool. A member texts a short question in plain language — like "what's my copay for urgent care?", "is therapy covered?", or "how much should antibiotics cost" — and gets a direct answer based on their plan.</p>
+
+    <p>For this demo, the tool is loaded with a single fictional plan (a PPO with a realistic benefit structure) so anyone can text in and try it without needing a real member ID.</p>
+
+    <div class="screenshot-placeholder">Screenshot: QR code demo</div>
+
+    <div class="demo-block">
+      <span class="demo-label">Try it yourself</span>
+      <span class="demo-prompt">"What's my copay at physical therapy?"</span>
+      <span class="demo-prompt">"Is therapy covered?"</span>
+      <span class="demo-prompt">"What tier is Amoxicillin?"</span>
+      <span class="demo-prompt">"What's my deductible?"</span>
+    </div>
+
+    <div class="screenshot-placeholder">Screenshot: example conversation</div>
+
+    <hr class="section-rule" />
+    <h2>What's In Scope</h2>
+
+    <p>CoverageCheck is designed to answer a specific, bounded set of questions: copays by visit type (primary care, specialist, urgent care, physical therapy, mental health), whether a service category is covered, prescription coverage and cost tiers, and deductible and out-of-pocket maximum amounts.</p>
+
+    <hr class="section-rule" />
+    <h2>What's Out of Scope (and Why)</h2>
+
+    <p><strong>Real-time cost estimation:</strong> answering "how much will I owe after my deductible" requires knowing how much of a member's deductible they've already met, which means integrating with the plan's claims system in real time. It also depends on more than just the provider type. Someone can't ask "how much will my surgery cost" because that answer involves far more than a single lookup. These are v2 problems.</p>
+
+    <p><strong>Provider lookup:</strong> "is this specific doctor in-network" is a different product with different data requirements. It's a real problem worth solving but not this one.</p>
+
+    <p><strong>Claim status:</strong> a separate product entirely. CoverageCheck is a benefits reference tool, not a claims tool.</p>
+
+    <hr class="section-rule" />
+    <h2>How It Would Work in Production</h2>
+
+    <p>The demo uses a hardcoded plan. In a real implementation, a member would verify their identity when they first text in, likely by providing their member ID and date of birth, or confirming a one-time code sent to their email on file. Once verified, the system recognizes their phone number for future sessions. No username, no password, no recovery flow. The goal is to keep authentication lightweight enough that it doesn't recreate the friction the tool is designed to eliminate.</p>
+
+    <p>Once verified, the system pulls their specific plan's benefit structure and answers questions accordingly. The underlying data (copays, coverage rules, formulary tiers) already exists in every health plan's systems. The technical lift isn't generating the information, it's connecting a natural language interface to a structured benefits database and handling the authentication layer securely.</p>
+
+    <hr class="section-rule" />
+    <h2>Metrics I'd Track</h2>
+
+    <p><span class="metric-name">Activation rate:</span> the percentage of members who complete verification and send at least one query. This is the most basic signal that the tool is usable and that the onboarding flow isn't creating its own friction.</p>
+
+    <p><span class="metric-name">Query completion rate:</span> did the member get a useful answer, or did they give up or ask a follow-up that suggests they didn't?</p>
+
+    <p><span class="metric-name">Question category distribution:</span> what are members actually asking about? This reveals where the biggest information gaps are and what to prioritize next.</p>
+
+    <p><span class="metric-name">Channel deflection:</span> are members who use CoverageCheck less likely to call member services for the same questions? This is the metric a health plan would care about most.</p>
+
+    <p><span class="metric-name">Return usage:</span> do members text back? Repeat usage is a signal that it's actually solving the problem.</p>
+
+    <hr class="section-rule" />
+    <h2>What I'd Explore Next</h2>
+
+    <p>Real-time eligibility integration, so the tool can answer "how much of my deductible have I met?" and give personalized cost estimates rather than just plan-level copays. This is the biggest unlock for v2.</p>
+
+    <p>WhatsApp or RCS for richer formatting (tables, cards) on supported devices.</p>
+
+    <p>Embedding in provider check-in flows. Imagine a QR code in a waiting room that opens a pre-authenticated CoverageCheck session, so members can look up their copay while they're waiting to be seen. This closes the loop on the original problem: a member sitting in a waiting room wondering what they'll owe.</p>
+
+    <p>Proactive outreach: texting a member before a scheduled appointment with their relevant copay information, so they don't have to ask.</p>
+
+    <hr class="section-rule" />
+    <h2>What I Learned</h2>
+
+    <p>When I tested early versions of this with friends and family, a few things surprised me. People asked questions I hadn't anticipated, like "do I need a referral for a dermatologist?" and "is my gym membership covered?" Neither was in my initial scope, and both pointed to a broader theme: members don't know what they don't know about their plan, and they'll use any available channel to find out.</p>
+
+    <p>It also reminded me that you can't scope a product like this purely from the data that's available. The scope has to start from what real people actually try to ask, which is often broader and messier than what you'd design for if you were working off a summary document.</p>
+
+    <p>That's actually an argument for making the tool more conversational over time — less lookup tool, more benefits guide.</p>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <span class="footer-name">Samantha Greenblatt</span>
+    <nav class="footer-links">
+      <a href="https://www.linkedin.com/in/samanthalgreenblatt/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/samanthagreenblatt" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:sgreenblatt12@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
