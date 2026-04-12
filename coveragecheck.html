@@ -14,10 +14,16 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     /* ── Case study layout ── */
+    .case-study-header {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem var(--pad-x) 2.5rem;
+    }
+
     .case-study-body {
       max-width: 860px;
       margin: 0 auto;
-      padding: 3rem var(--pad-x) 7rem;
+      padding: 0 var(--pad-x) 7rem;
     }
 
     /* Back link */
@@ -31,7 +37,7 @@
       font-weight: 500;
       color: var(--accent);
       text-decoration: none;
-      margin-bottom: 3.5rem;
+      margin-bottom: 1.5rem;
       transition: color 0.2s, gap 0.2s;
     }
     .back-link:hover {
@@ -46,9 +52,13 @@
       font-size: 1.65rem;
       color: var(--headline);
       font-weight: 600;
-      margin-top: 4.5rem;
+      margin-top: 3.5rem;
       margin-bottom: 1.1rem;
       line-height: 1.2;
+    }
+
+    .case-study-body h2:first-of-type {
+      margin-top: 2.5rem;
     }
 
     .case-study-body p {
@@ -138,15 +148,14 @@
   </nav>
 
   <!-- ── Page header ── -->
-  <header class="page-header" style="max-width: 860px;">
+  <header class="case-study-header">
+    <a href="work.html" class="back-link">Back to work</a>
     <span class="eyebrow">Case study</span>
-    <h1>CoverageCheck.</h1>
+    <h1 style="font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4.2rem); color: var(--headline); line-height: 1.1; margin-top: 0.75rem;">CoverageCheck.</h1>
   </header>
 
   <!-- ── Case study body ── -->
   <main class="case-study-body">
-
-    <a href="work.html" class="back-link">Back to work</a>
 
     <h2>The Problem</h2>
 
