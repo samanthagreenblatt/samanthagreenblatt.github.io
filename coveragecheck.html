@@ -126,6 +126,56 @@
       display: inline-block;
     }
 
+    /* ── Try it CTA ── */
+    .try-it-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      border: 1.5px solid var(--accent);
+      border-radius: 14px;
+      background: rgba(148, 100, 166, 0.06);
+      padding: 1.4rem 1.75rem;
+      margin: 1rem 0 2.5rem;
+    }
+
+    .try-it-block .try-it-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .try-it-block .try-it-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .try-it-block .try-it-desc {
+      font-size: 0.95rem;
+      color: var(--body-text);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .try-it-block .try-it-btn {
+      flex-shrink: 0;
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .try-it-block .try-it-btn:hover { opacity: 0.85; }
+
     /* ── Metric / "next" paragraphs ── */
     .metric-name {
       font-weight: 600;
@@ -185,23 +235,25 @@
 
     <h2>What I Built</h2>
 
-    <p>CoverageCheck is a text-based benefits lookup tool. A member texts a short question in plain language — like "what's my copay for urgent care?", "is therapy covered?", or "how much should antibiotics cost" — and gets a direct answer based on their plan.</p>
+    <p>CoverageCheck is a text-based benefits lookup tool. A member texts a short question in plain language, like "what's my copay for urgent care?", "is therapy covered?", or "how much should antibiotics cost", and gets a direct answer based on their plan.</p>
 
     <p>For this demo, the tool is loaded with a single fictional plan (a PPO with a realistic benefit structure) so anyone can text in and try it without needing a real member ID.</p>
 
-    <div class="screenshot-placeholder">Screenshot: QR code demo</div>
+    <p>The product is an SMS tool: text <strong>+1 (929) 930-6776</strong> and you'll get a response the same way you would from a real benefits line. That number is live but currently pending Twilio's toll-free verification, which is required before messages can go out at scale. While waiting on that, I built a web-based version of the same experience. It has the same system prompt and fictional plan to test conversation quality and get feedback. You can try it at <a href="https://coveragecheck.up.railway.app" target="_blank" rel="noopener">coveragecheck.up.railway.app</a>.</p>
 
-    <div class="demo-block">
-      <span class="demo-label">Try it yourself</span>
-      <div class="demo-bubbles">
-        <div class="demo-bubble">"What's my copay at physical therapy?"</div>
-        <div class="demo-bubble">"Is therapy covered?"</div>
-        <div class="demo-bubble">"What tier is Amoxicillin?"</div>
-        <div class="demo-bubble">"What's my deductible?"</div>
+    <p>A few examples of what it handles:</p>
+
+    <img src="coveragecheck-pt-copay.png" alt="CoverageCheck conversation: physical therapy copay question" style="width:100%;border-radius:14px;margin:2.5rem 0;display:block;" />
+    <img src="coveragecheck-urgent-care-pcp.png" alt="CoverageCheck conversation: urgent care vs PCP copay comparison and prescription cost" style="width:100%;border-radius:14px;margin:2.5rem 0;display:block;" />
+    <img src="coveragecheck-acupuncture.png" alt="CoverageCheck conversation: acupuncture coverage question" style="width:100%;border-radius:14px;margin:2.5rem 0;display:block;" />
+
+    <div class="try-it-block">
+      <div class="try-it-text">
+        <span class="try-it-label">Try it yourself</span>
+        <p class="try-it-desc">Ask the web version anything about the fictional plan — copays, coverage, prescriptions, referrals.</p>
       </div>
+      <a href="https://coveragecheck.up.railway.app" target="_blank" rel="noopener" class="try-it-btn">Open CoverageCheck →</a>
     </div>
-
-    <div class="screenshot-placeholder">Screenshot: example conversation</div>
 
     <h2>What's In Scope</h2>
 
@@ -249,7 +301,7 @@
 
     <p>It also reminded me that you can't scope a product like this purely from the data that's available. The scope has to start from what real people actually try to ask, which is often broader and messier than what you'd design for if you were working off a summary document.</p>
 
-    <p>That's actually an argument for making the tool more conversational over time — less lookup tool, more benefits guide.</p>
+    <p>That's actually an argument for making the tool more conversational over time: less lookup tool, more benefits guide.</p>
 
   </main>
 
